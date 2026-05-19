@@ -1,0 +1,19 @@
+{
+  "study_title": "Water, Sanitation, and Hygiene Determinants of Childhood Diarrhoea and Under-Five Mortality in Ghana: A 261-District Spatial Machine-Learning Mediation Analysis",
+  "authors": "Valentine Golden Ghanem",
+  "affiliations": "Cocoa Clinic, Ghana COCOBOD, Accra, Ghana",
+  "orcid": "0009-0002-8332-0220",
+  "study_period": "2022 DHS Ghana + 2021 GSS Census",
+  "geographic_scope": "Ghana 261 health districts (260 mapped + Guan tabular)",
+  "sample_size_N": 261,
+  "primary_outcome": "Under-five mortality rate (U5MR per 1,000 live births)",
+  "primary_result": "Global Moran's I = 0.8327 (z = 20.686, p < 0.001)",
+  "top_finding_1": "25 LISA HH hotspots in northern Ghana; 35 LL coldspots in south",
+  "top_finding_2": "~36% of improved-water \u2192 U5MR effect mediated through diarrhoea (NIE -0.12, NDE -0.21, total -0.32, E-value 1.11)",
+  "reporting_guideline": "STROBE + TRIPOD+AI + RECORD-Spatial",
+  "target_journal": "International Journal of Environmental Research and Public Health (IJERPH)",
+  "repo_slug": "wash-child-health-ghana-261-districts",
+  "qa_badge": "QA_PASSED_2026-05-14.txt",
+  "reproducibility_score": "88%",
+  "reconciliation_score": "100%"
+}

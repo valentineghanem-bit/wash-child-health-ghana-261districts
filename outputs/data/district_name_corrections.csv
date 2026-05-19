@@ -1,0 +1,32 @@
+MS_District,GeoJSON_District,Region,Status
+Akrofuom,Adansi Akrofuom,Ashanti,MAPPED
+Bosomtwi,Bosomtwe,Ashanti,MAPPED
+"Kumasi Metropolitan Area (KMA)-Bantama, Manhyia North, Manhyia South, Nhyiaeso, & Subin",Kumasi Metropolitan,Ashanti,MAPPED
+Sekyere Afram Plains,Sekyere Afram Plains North,Ashanti,MAPPED
+Dormaa Central Municipal,Dormaa Municipal,Bono,MAPPED
+Assin Central Municipal,Assin Fosu,Central,MAPPED
+Awutu Senya West,Awutu Senya,Central,MAPPED
+Cape Cape Metropolitan Area (CCMA)-Cape Coast South & Cape Coast North,Cape Coast Metropolitan,Central,MAPPED
+Mfantsiman Municipal,Mfantseman Municipal,Central,MAPPED
+Twifo Ati Morkwa,Twifo Atti-Morkwa,Central,MAPPED
+Twifo Heman Lower Denkyira,Twifo Hemang Lower Denkyira,Central,MAPPED
+Akwapim North Municipal,Akwapem North,Eastern,MAPPED
+Akwapim South Municipal,Akwapem South,Eastern,MAPPED
+Akyemansa,Akyem Mansa,Eastern,MAPPED
+Asene Manso Akroso,Asene Akroso Manso,Eastern,MAPPED
+Denkyembuor,Denkyembour,Eastern,MAPPED
+Lower Manya Krobo Municipal,Lower Manya,Eastern,MAPPED
+Upper Manya Krobo,Upper Manya,Eastern,MAPPED
+"Accra Metropolitan Area (AMA)-Ablekuma South, Ashiedu Keteke & Okaikoi South",Accra Metropolis,Greater Accra,MAPPED
+Adentan Municipal,Adenta Municipal,Greater Accra,MAPPED
+Ningo-Prampram,Ningo/Prampram,Greater Accra,MAPPED
+Okaikoi North Municipal,Okaikwei North Municipal,Greater Accra,MAPPED
+Tema Metropolitan Area (TMA)-Tema Central & Tema East,Tema Metropolitan,Greater Accra,MAPPED
+Sagnarigu Municipal,Sagnerigu,Northern,MAPPED
+Tamale Metropolitan Area (TMA)-Tamale Central & Tamale South,Tamale Metropolitan,Northern,MAPPED
+Nkwanta North (Kpassa),Nkwanta North,Oti,MAPPED
+Bolgatanga East,Bolga  East,Upper East,MAPPED
+Kasena Nankana Municipal,Kasena Nankana East,Upper East,MAPPED
+Agortime-Ziope,Agotime Ziope,Volta,MAPPED
+"Sekondi Takoradi Metropolitan Area (STMA)- Takoradi, Sekondi & Essikado-Ketan",Sekondi Takoradi Metropolis,Western,MAPPED
+Guan,NOT_IN_GEOJSON,Oti,TABULAR_ONLY (261st district; legacy GeoJSON omits)

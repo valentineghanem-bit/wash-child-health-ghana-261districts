@@ -1,0 +1,25 @@
+,N,Mean,SD,Min,Median,Max
+U5MR_per_1000,261,43.15,10.92,20.0,45.0,72.0
+IMR_per_1000,261,29.72,8.01,16.0,34.0,46.0
+NMR_per_1000,261,19.03,6.81,10.0,15.0,32.0
+Diarrhoea_prevalence_pct,261,11.85,4.51,4.9,9.2,22.0
+Improved_water_pct,261,89.1,10.32,59.3,91.8,98.5
+Unimproved_water_pct,261,2.57,3.84,0.0,1.8,23.7
+Improved_sanitation_pct,261,64.49,21.78,21.9,72.0,91.4
+Unimproved_sanitation_pct,261,12.17,8.95,1.8,12.4,42.1
+Open_defecation_pct,261,23.36,23.72,5.0,11.1,71.1
+Water_treated_pct,261,3.27,1.73,0.5,3.0,5.9
+Incidence of Poverty,261,27.59,13.45,6.3,25.8,68.6
+Intensity of Poverty,261,43.44,1.74,40.5,43.1,51.2
+Illiteracy_rate_pct,261,28.98,14.74,5.41,26.88,60.84
+Uninsurance_rate_pct,261,30.95,13.51,5.23,30.19,73.17
+Unemployment_rate_pct,261,50.66,8.16,36.01,49.29,84.5
+Total Population,261,118051.52,67972.23,28179.0,100851.0,443945.0
+Under5_population,261,12517.7,6883.1,2675.0,11047.0,43324.0
+Youth_dependency_ratio,261,0.62,0.13,0.25,0.6,1.04
+EBF_within_1hr_pct,261,58.05,8.53,43.8,61.2,70.6
+Ever_breastfed_pct,261,96.88,1.56,94.0,97.0,98.9
+Child_anaemia_any_pct,261,47.79,11.2,35.4,44.7,69.4
+Child_anaemia_severe_pct,261,0.71,0.71,0.0,0.4,2.2
+Latitude,261,7.16,1.71,4.85,6.61,11.09
+Longitude,261,-1.02,1.02,-3.07,-0.95,1.07

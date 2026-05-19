@@ -1,0 +1,4 @@
+Exposure,a_X_to_M,b_M_to_Y,c_Total,c_prime_Direct,NIE,NIE_CI_low,NIE_CI_hi,NDE,NDE_CI_low,NDE_CI_hi,Total_CI_low,Total_CI_hi,Prop_mediated_pct,Prop_mediated_CI_low,Prop_mediated_CI_hi,E_value
+Improved_water_pct,-0.1742,0.6633,-0.3222,-0.2066,-0.1156,-0.161,-0.0713,-0.2066,-0.3637,-0.0447,-0.462,-0.1583,35.86,19.07,72.82,1.11
+Improved_sanitation_pct,0.0605,0.8187,0.0786,0.0291,0.0495,0.008,0.0885,0.0291,-0.1138,0.1464,-0.0687,0.1873,63.0,-497.26,505.55,1.07
+Open_defecation_pct,0.0883,0.8885,-0.244,-0.3225,0.0785,-0.0218,0.1817,-0.3225,-0.5153,-0.1831,-0.4771,-0.0491,-32.17,-257.99,6.43,1.09

@@ -1,0 +1,15 @@
+Feature,Gini_importance,Gini_pct
+Child_anaemia_any_pct,0.4071,40.71
+EBF_within_1hr_pct,0.3694,36.94
+Improved_water_pct,0.1666,16.66
+Improved_sanitation_pct,0.0149,1.49
+Diarrhoea_prevalence_pct,0.0126,1.26
+Water_treated_pct,0.0108,1.08
+Open_defecation_pct,0.0105,1.05
+Unemployment_rate_pct,0.0024,0.24
+Youth_dependency_ratio,0.0021,0.21
+Intensity of Poverty,0.0015,0.15
+Uninsurance_rate_pct,0.0011,0.11
+Illiteracy_rate_pct,0.0006,0.06
+Total Population,0.0003,0.03
+Incidence of Poverty,0.0001,0.01

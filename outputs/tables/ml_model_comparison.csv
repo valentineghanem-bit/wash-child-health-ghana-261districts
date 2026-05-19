@@ -1,0 +1,7 @@
+Model,RMSE,R²
+RandomForest (total-effect),9.961 ± 8.737,0.000 ± 0.000
+GradientBoosting (total-effect),9.906 ± 8.351,0.000 ± 0.000
+Stacked (total-effect),10.854,-0.016
+RandomForest (full+mediator),9.535 ± 8.850,0.000 ± 0.000
+GradientBoosting (full+mediator),9.784 ± 8.412,0.000 ± 0.000
+Stacked (full+mediator),10.690,0.014

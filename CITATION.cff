@@ -1,0 +1,20 @@
+cff-version: 1.2.0
+message: "If you use this software or data, please cite as follows."
+authors:
+  - family-names: Ghanem
+    given-names: Valentine Golden
+    orcid: "https://orcid.org/0009-0002-8332-0220"
+    affiliation: "Cocoa Clinic, Ghana COCOBOD, Accra, Ghana"
+    email: valentineghanem@gmail.com
+title: "Water, Sanitation, and Hygiene Determinants of Childhood Diarrhoea and Under-Five Mortality in Ghana: A 261-District Spatial Machine-Learning Mediation Analysis"
+version: 1.0.0
+date-released: "2026-05-14"
+license: MIT
+url: "https://github.com/valentineghanem-bit/wash-child-health-ghana-261-districts"
+keywords:
+  - WASH
+  - under-five mortality
+  - spatial epidemiology
+  - causal mediation
+  - Ghana
+  - Demographic Health Survey

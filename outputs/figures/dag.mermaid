@@ -1,0 +1,93 @@
+%%{init: {'theme':'base', 'themeVariables': {'primaryColor':'#f3f8fb', 'primaryTextColor':'#0b3d4a', 'primaryBorderColor':'#0b6b89', 'lineColor':'#345', 'fontSize':'14px'}}}%%
+flowchart LR
+
+    %% ========== EXPOSURE CLUSTER (WASH) ==========
+    subgraph WASH ["WASH exposures (district)"]
+        W1["Improved water<br/>source (%)"]
+        W2["Improved sanitation<br/>facility (%)"]
+        W3["Open defecation (%)"]
+        W4["Household water<br/>treatment (%)"]
+    end
+
+    %% ========== MEDIATOR ==========
+    M["Childhood diarrhoea<br/>prevalence (%)"]:::med
+
+    %% ========== OUTCOMES ==========
+    O1["Under-5 mortality rate<br/>(per 1,000 LB)"]:::out
+    O2["Infant mortality<br/>(secondary)"]:::out2
+    O3["Neonatal mortality<br/>(secondary)"]:::out2
+
+    %% ========== SOCIOECONOMIC CONFOUNDERS (back-door) ==========
+    subgraph SE ["Socioeconomic confounders"]
+        C1["Poverty incidence<br/>+ intensity"]
+        C2["Adult illiteracy"]
+        C3["Health insurance<br/>non-enrolment"]
+        C4["Unemployment"]
+    end
+
+    %% ========== DEMOGRAPHIC + URBANICITY CONFOUNDERS ==========
+    subgraph DEMO ["Demographic / urbanicity confounders"]
+        D1["Total district<br/>population"]
+        D2["Youth dependency<br/>ratio"]
+        D3["Urbanicity<br/>(Metro/Munic/District)"]
+    end
+
+    %% ========== COMPETING / MECHANISTIC PATHWAYS ==========
+    subgraph MECH ["Competing / mechanistic covariates"]
+        X1["Early initiation<br/>of breastfeeding"]
+        X2["Child anaemia<br/>(any/severe)"]
+    end
+
+    %% ========== UNMEASURED LATENTS ==========
+    U1{{"Unmeasured U:<br/>healthcare access,<br/>maternal education,<br/>climate"}}:::latent
+
+    %% ========== EDGES — EXPOSURE → MEDIATOR ==========
+    W1 -- "−" --> M
+    W2 -- "−" --> M
+    W3 -- "+" --> M
+    W4 -- "−" --> M
+
+    %% ========== EDGES — MEDIATOR → OUTCOME (indirect path) ==========
+    M -- "+" --> O1
+    M -- "+" --> O2
+    M -- "+" --> O3
+
+    %% ========== EDGES — EXPOSURE → OUTCOME (direct path, residual) ==========
+    W1 -- "− direct" --> O1
+    W2 -- "− direct" --> O1
+    W3 -- "+ direct" --> O1
+
+    %% ========== EDGES — CONFOUNDERS → BOTH EXPOSURE AND OUTCOME ==========
+    C1 --> W1
+    C1 --> W2
+    C1 --> W3
+    C1 --> O1
+    C1 --> M
+    C2 --> W1
+    C2 --> W2
+    C2 --> O1
+    C3 --> O1
+    C4 --> C1
+    D1 --> O1
+    D2 --> O1
+    D3 --> W1
+    D3 --> W2
+    D3 --> W3
+    D3 --> O1
+
+    %% ========== EDGES — COMPETING PATHWAYS ==========
+    X1 --> M
+    X1 --> O1
+    X2 --> O1
+    X2 --> M
+
+    %% ========== EDGES — LATENT BACKGROUND ==========
+    U1 -. unmeasured .-> W1
+    U1 -. unmeasured .-> M
+    U1 -. unmeasured .-> O1
+
+    %% ========== STYLES ==========
+    classDef med fill:#fff3d6,stroke:#b58a00,stroke-width:2px,color:#5a3a00;
+    classDef out fill:#ffd6d6,stroke:#a40000,stroke-width:2.5px,color:#5a0000;
+    classDef out2 fill:#ffece6,stroke:#a44000,stroke-width:1.5px,color:#5a2000;
+    classDef latent fill:#eee,stroke:#888,stroke-dasharray: 5 5,color:#444;

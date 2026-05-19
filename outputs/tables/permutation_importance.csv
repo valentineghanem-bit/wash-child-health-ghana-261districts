@@ -1,0 +1,15 @@
+Feature,PermImportance_mean,PermImportance_SD,PermImportance_pct
+Improved_water_pct,0.5972,0.0629,46.99
+Child_anaemia_any_pct,0.3443,0.0173,27.09
+EBF_within_1hr_pct,0.2985,0.0159,23.48
+Diarrhoea_prevalence_pct,0.0116,0.0012,0.91
+Improved_sanitation_pct,0.007,0.0005,0.55
+Water_treated_pct,0.0053,0.0005,0.41
+Open_defecation_pct,0.0051,0.0003,0.4
+Unemployment_rate_pct,0.0006,0.0002,0.05
+Youth_dependency_ratio,0.0006,0.0001,0.04
+Intensity of Poverty,0.0004,0.0001,0.03
+Uninsurance_rate_pct,0.0002,0.0001,0.02
+Illiteracy_rate_pct,0.0001,0.0,0.01
+Incidence of Poverty,0.0,0.0,0.0
+Total Population,0.0,0.0,0.0

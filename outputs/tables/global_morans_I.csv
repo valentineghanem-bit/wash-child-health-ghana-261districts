@@ -1,0 +1,8 @@
+Variable,Moran_I,z_score,p_perm,Clustering
+U5MR_per_1000,0.8327,20.686,0.001,Strong
+Diarrhoea_prevalence_pct,0.8233,19.978,0.001,Strong
+Improved_water_pct,0.7699,18.768,0.001,Strong
+Improved_sanitation_pct,0.9236,22.438,0.001,Strong
+Open_defecation_pct,0.9559,23.584,0.001,Strong
+Incidence of Poverty,0.6437,16.599,0.001,Strong
+Illiteracy_rate_pct,0.7878,19.49,0.001,Strong

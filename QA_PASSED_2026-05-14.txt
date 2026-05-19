@@ -1,0 +1,23 @@
+QA BADGE — QA PASSED
+Project: WASH Ghana 261 Districts
+Date: 2026-05-14
+Framework: AIPOCH v6.0
+
+Output ratings:
+  Manuscript:    35/36 PASS
+  Poster:        14/16 PASS
+  Dashboard:     17/20 PASS
+  Master CSV:    22/24 PASS
+  GitHub Repo:   22/25 PASS
+
+Reconciliation: PASS (20/20 = 100.0%)
+Stress Test:    CONDITIONALLY ROBUST
+Reproducibility: 88%
+Critical defects: 0
+
+Open action items:
+  - Open defecation total effect has counter-intuitive negative sign (regional confounding)
+  - DHS regional values assigned to constituent districts is an ecological-fallacy risk
+
+/disseminate: UNLOCKED
+/github-publish: PERMITTED (subject to SYNC_PASS)
