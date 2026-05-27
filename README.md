@@ -1,5 +1,7 @@
 # WASH Determinants of Child Health, Ghana 261 Districts
 
+[![CI](https://github.com/valentineghanem-bit/wash-child-health-ghana-261districts/actions/workflows/ci.yml/badge.svg)](https://github.com/valentineghanem-bit/wash-child-health-ghana-261districts/actions) [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE) [![Python 3.12](https://img.shields.io/badge/python-3.12-blue.svg)](https://www.python.org/) [![R 4.3+](https://img.shields.io/badge/R-4.3+-blue.svg)](https://www.r-project.org/) [![ORCID](https://img.shields.io/badge/ORCID-0009--0002--8332--0220-green.svg)](https://orcid.org/0009-0002-8332-0220)
+
 Spatial machine-learning mediation analysis of water, sanitation, and hygiene (WASH) effects on
 childhood diarrhoea and under-five mortality across Ghana's 261 health districts.
 
