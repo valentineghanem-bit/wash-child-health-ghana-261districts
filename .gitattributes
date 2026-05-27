@@ -7,3 +7,23 @@
 *.geojson binary
 *.docx binary
 *.pdf binary
+
+# Source code
+*.py    text diff=python linguist-detectable=true
+*.R     text diff=r      linguist-detectable=true linguist-language=R
+*.r     text diff=r      linguist-detectable=true linguist-language=R
+*.Rmd   text             linguist-detectable=true linguist-language=R
+*.js    text             linguist-detectable=true
+*.sh    text             linguist-detectable=true linguist-language=Shell
+
+# Generated HTML outputs
+dashboard/**         linguist-generated=true
+outputs/**/*.html    linguist-generated=true
+**/*Dashboard*.html  linguist-generated=true
+poster/**            linguist-generated=true
+**/*Poster*.html     linguist-generated=true
+
+# Data files
+*.csv  linguist-detectable=false
+*.json linguist-detectable=false
+*.tsv  linguist-detectable=false
