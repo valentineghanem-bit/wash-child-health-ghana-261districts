@@ -263,13 +263,13 @@ SC_PTS.forEach(d=>{
   const ab=AB[d.n]||d.n.slice(0,2).toUpperCase(),fn=FN[d.n]||d.n;
   const cx2=px(d.x).toFixed(1),cy2=py(d.y).toFixed(1);
   const ci=svgEl('circle',{cx:cx2,cy:cy2,r:9,fill:LISA_COLORS[d.lisa]||'#bdc3c7',stroke:'white','stroke-width':'1.5',opacity:'.92',cursor:'pointer'},svg);
-  ci.addEventListener('mouseenter',e=>showTip(e,'<strong>'+fn+'</strong><br>Open Defecation (%): <strong>'+d.x+'%</strong><br>U5MR per 1,000: <strong>'+d.y+'</strong>'));
+  ci.addEventListener('mouseenter',e=>showTip(e,'<strong>'+fn+'</strong><br>Open Defecation (%): <strong>'+d.x+'</strong><br>U5MR per 1,000: <strong>'+d.y+'</strong>'));
   ci.addEventListener('mousemove',moveTip);ci.addEventListener('mouseleave',hideTip);
   svgEl('text',{x:cx2,y:(parseFloat(cy2)+(LB[d.n]?21:-13)).toFixed(1),'text-anchor':'middle','font-size':'9.5','font-weight':'700','fill':'#222'},svg).textContent=ab;
 });
 svgEl('line',{x1:mL,y1:mT,x2:mL,y2:mT+ch,stroke:'#bbb'},svg);
 svgEl('line',{x1:mL,y1:mT+ch,x2:mL+pW,y2:mT+ch,stroke:'#bbb'},svg);
-svgEl('text',{x:mL+pW/2,y:mT+ch+18,'text-anchor':'middle','font-size':'10','fill':'#555'},svg).textContent='Open Defecation (%) (%)';
+svgEl('text',{x:mL+pW/2,y:mT+ch+18,'text-anchor':'middle','font-size':'10','fill':'#555'},svg).textContent='Open Defecation (%)';
 svgEl('text',{x:12,y:mT+ch/2,'text-anchor':'middle','font-size':'10','fill':'#555',transform:'rotate(-90,12,'+(mT+ch/2)+')'},svg).textContent='U5MR per 1,000';
 const lw=document.createElement('div');lw.style.cssText='margin-top:8px;padding:6px 8px;background:#f8faff;border-radius:6px;border:1px solid #e8eaf6';
 const lt=document.createElement('div');lt.style.cssText='font-size:.7em;font-weight:700;color:#888;text-transform:uppercase;letter-spacing:.04em;margin-bottom:5px';lt.textContent='Region Key — by LISA Cluster';lw.appendChild(lt);
