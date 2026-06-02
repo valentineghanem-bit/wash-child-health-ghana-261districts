@@ -55,7 +55,7 @@ tr:hover td{background:#f8faff}
 <div class="kpi-row"><div class="kpi-card"><div class="kpi-val">0.83</div><div class="kpi-lbl">Moran's I U5MR</div><div class="kpi-sub">p < 0.001</div></div><div class="kpi-card"><div class="kpi-val">36%</div><div class="kpi-lbl">WASH-mediated effect</div><div class="kpi-sub">B=1,000 bootstrap</div></div><div class="kpi-card"><div class="kpi-val">0.81</div><div class="kpi-lbl">RF AUC</div><div class="kpi-sub">LOROCV</div></div><div class="kpi-card"><div class="kpi-val">25</div><div class="kpi-lbl">HH Clusters</div><div class="kpi-sub">Northern Ghana</div></div><div class="kpi-card"><div class="kpi-val">43%</div><div class="kpi-lbl">Without Improved Water</div><div class="kpi-sub">National avg</div></div><div class="kpi-card"><div class="kpi-val">261</div><div class="kpi-lbl">Districts</div><div class="kpi-sub">All Ghana</div></div></div>
 <div class="grid">
   <div class="panel"><h3>District Choropleth — U5MR (per 1,000)</h3><div id="cPanel"></div><div id="legC" style="display:flex;align-items:center;gap:6px;margin-top:4px;padding:0 2px"></div></div>
-  <div class="panel"><h3>LISA Spatial Clusters</h3><div id="lPanel"></div><div class="leg"><span><i style="background:#c0392b"></i>HH High-High</span><span><i style="background:#2980b9"></i>LL Low-Low</span><span><i style="background:#e67e22"></i>HL High-Low</span><span><i style="background:#82c0e8"></i>LH Low-High</span><span><i style="background:#bdc3c7"></i>NS Not sig.</span></div></div>
+  <div class="panel"><h3>LISA Spatial Clusters</h3><div id="lPanel"></div><div id="legL" style="margin-top:6px"></div></div>
   <div class="panel full"><h3>WASH Access by Region — Water · Sanitation · OD</h3><div id="pC" style="width:100%;min-height:220px"></div></div>
   <div class="panel"><h3>Mediation Pathway: WASH → Diarrhoea → U5MR</h3><div id="pD" style="width:100%;min-height:220px"></div></div>
   <div class="panel"><h3>RF Feature Importance</h3><div id="pE" style="width:100%;min-height:220px"></div></div>
@@ -73,7 +73,7 @@ tr:hover td{background:#f8faff}
 <script>
 function cs(t){const s=[[239,243,255],[189,215,231],[107,174,214],[49,130,189],[8,81,156]];const i=Math.min(Math.floor(t*(s.length-1)),s.length-2);const f=t*(s.length-1)-i;const a=s[i],b=s[i+1];return'rgb('+Math.round(a[0]+(b[0]-a[0])*f)+','+Math.round(a[1]+(b[1]-a[1])*f)+','+Math.round(a[2]+(b[2]-a[2])*f)+')';}
 const cs_node_rt=cs;
-const DDATA={"\"KUMASI METROPOLITAN AREA (KMA)-BANTAMA":{"v":84.7,"lisa":"& Subin\""},"BIAKOYE":{"v":72,"lisa":"HH"},"JASIKAN MUNICIPAL":{"v":72,"lisa":"HH"},"KADJEBI":{"v":72,"lisa":"HH"},"KRACHI EAST MUNICIPAL":{"v":72,"lisa":"HH"},"KRACHI NCHUMURU":{"v":72,"lisa":"HH"},"KRACHI WEST MUNICIPAL":{"v":72,"lisa":"HH"},"NKWANTA NORTH (KPASSA)":{"v":72,"lisa":"HH"},"NKWANTA SOUTH MUNICIPAL":{"v":72,"lisa":"HH"},"BOLE":{"v":63,"lisa":"HH"},"CENTRAL GONJA":{"v":63,"lisa":"HH"},"EAST GONJA MUNICIPAL":{"v":63,"lisa":"HH"},"NORTH EAST GONJA":{"v":63,"lisa":"HH"},"NORTH GONJA":{"v":63,"lisa":"HH"},"SAWLA TUNA KALBA":{"v":63,"lisa":"HH"},"WEST GONJA":{"v":63,"lisa":"HH"},"KPANDAI":{"v":52,"lisa":"HH"},"MION":{"v":52,"lisa":"HH"},"NANUMBA NORTH MUNICIPAL":{"v":52,"lisa":"HH"},"NANUMBA SOUTH":{"v":52,"lisa":"HH"},"TAMALE METROPOLITAN AREA (TMA)-TAMALE CENTRAL & TAMALE SOUTH":{"v":52,"lisa":"HH"},"TOLON":{"v":52,"lisa":"HH"},"KINTAMPO NORTH MUNICIPAL":{"v":48,"lisa":"HH"},"PRU EAST":{"v":48,"lisa":"HH"},"SENE EAST":{"v":48,"lisa":"HH"},"HOHOE MUNICIPAL":{"v":47,"lisa":"HH"},"AKWAPIM SOUTH MUNICIPAL":{"v":42,"lisa":"LL"},"NSAWAM ADOAGYIRI MUNICIPAL":{"v":42,"lisa":"LL"},"JUABOSO":{"v":37,"lisa":"LL"},"DORMAA CENTRAL MUNICIPAL":{"v":36,"lisa":"LL"},"SUNYANI MUNICIPAL":{"v":36,"lisa":"LL"},"ASUNAFO NORTH MUNICIPAL":{"v":29,"lisa":"LL"},"ASUTIFI NORTH":{"v":29,"lisa":"LL"},"ABLEKUMA CENTRAL MUNICIPAL":{"v":20,"lisa":"LL"},"ABLEKUMA NORTH MUNICIPAL":{"v":20,"lisa":"LL"},"ABLEKUMA WEST MUNICIPAL":{"v":20,"lisa":"LL"},"ADA WEST":{"v":20,"lisa":"LL"},"ADENTAN MUNICIPAL":{"v":20,"lisa":"LL"},"ASHAIMAN MUNICIPAL":{"v":20,"lisa":"LL"},"AYAWASO CENTRAL MUNICIPAL":{"v":20,"lisa":"LL"},"AYAWASO EAST MUNICIPAL":{"v":20,"lisa":"LL"},"AYAWASO NORTH MUNICIPAL":{"v":20,"lisa":"LL"},"AYAWASO WEST MUNICIPAL":{"v":20,"lisa":"LL"},"GA CENTRAL MUNICIPAL":{"v":20,"lisa":"LL"},"GA EAST MUNICIPAL":{"v":20,"lisa":"LL"},"GA NORTH MUNICIPAL":{"v":20,"lisa":"LL"},"GA SOUTH MUNICIPAL":{"v":20,"lisa":"LL"},"GA WEST MUNICIPAL":{"v":20,"lisa":"LL"},"KORLE KLOTTEY MUNICIPAL":{"v":20,"lisa":"LL"},"KPONE KATAMANSO MUNICIPAL":{"v":20,"lisa":"LL"},"KROWOR MUNICIPAL":{"v":20,"lisa":"LL"},"LA DADE-KOTOPON MUNICIPAL":{"v":20,"lisa":"LL"},"LA NKWANTANANG MADINA MUNICIPAL":{"v":20,"lisa":"LL"},"LEDZOKUKU MUNICIPAL":{"v":20,"lisa":"LL"},"NINGO-PRAMPRAM":{"v":20,"lisa":"LL"},"OKAIKOI NORTH MUNICIPAL":{"v":20,"lisa":"LL"},"SHAI-OSUDOKU":{"v":20,"lisa":"LL"},"TEMA METROPOLITAN AREA (TMA)-TEMA CENTRAL & TEMA EAST":{"v":20,"lisa":"LL"},"TEMA WEST MUNICIPAL":{"v":20,"lisa":"LL"},"WEIJA GBAWE MUNICIPAL":{"v":20,"lisa":"LL"},"\"SEKONDI TAKORADI METROPOLITAN AREA (STMA)- TAKORADI":{"v":9.7,"lisa":"0.345"},"\"ACCRA METROPOLITAN AREA (AMA)-ABLEKUMA SOUTH":{"v":5,"lisa":"0.001"}};
+const DDATA={"BIAKOYE":{"v":72,"lisa":"HH"},"JASIKAN MUNICIPAL":{"v":72,"lisa":"HH"},"KADJEBI":{"v":72,"lisa":"HH"},"KRACHI EAST MUNICIPAL":{"v":72,"lisa":"HH"},"KRACHI NCHUMURU":{"v":72,"lisa":"HH"},"KRACHI WEST MUNICIPAL":{"v":72,"lisa":"HH"},"NKWANTA NORTH (KPASSA)":{"v":72,"lisa":"HH"},"NKWANTA SOUTH MUNICIPAL":{"v":72,"lisa":"HH"},"BOLE":{"v":63,"lisa":"HH"},"CENTRAL GONJA":{"v":63,"lisa":"HH"},"EAST GONJA MUNICIPAL":{"v":63,"lisa":"HH"},"NORTH EAST GONJA":{"v":63,"lisa":"HH"},"NORTH GONJA":{"v":63,"lisa":"HH"},"SAWLA TUNA KALBA":{"v":63,"lisa":"HH"},"WEST GONJA":{"v":63,"lisa":"HH"},"KPANDAI":{"v":52,"lisa":"HH"},"MION":{"v":52,"lisa":"HH"},"NANUMBA NORTH MUNICIPAL":{"v":52,"lisa":"HH"},"NANUMBA SOUTH":{"v":52,"lisa":"HH"},"TAMALE METROPOLITAN AREA (TMA)-TAMALE CENTRAL & TAMALE SOUTH":{"v":52,"lisa":"HH"},"TOLON":{"v":52,"lisa":"HH"},"KINTAMPO NORTH MUNICIPAL":{"v":48,"lisa":"HH"},"PRU EAST":{"v":48,"lisa":"HH"},"SENE EAST":{"v":48,"lisa":"HH"},"HOHOE MUNICIPAL":{"v":47,"lisa":"HH"},"AKWAPIM SOUTH MUNICIPAL":{"v":42,"lisa":"LL"},"NSAWAM ADOAGYIRI MUNICIPAL":{"v":42,"lisa":"LL"},"JUABOSO":{"v":37,"lisa":"LL"},"DORMAA CENTRAL MUNICIPAL":{"v":36,"lisa":"LL"},"SUNYANI MUNICIPAL":{"v":36,"lisa":"LL"},"ASUNAFO NORTH MUNICIPAL":{"v":29,"lisa":"LL"},"ASUTIFI NORTH":{"v":29,"lisa":"LL"},"ABLEKUMA CENTRAL MUNICIPAL":{"v":20,"lisa":"LL"},"ABLEKUMA NORTH MUNICIPAL":{"v":20,"lisa":"LL"},"ABLEKUMA WEST MUNICIPAL":{"v":20,"lisa":"LL"},"ADA WEST":{"v":20,"lisa":"LL"},"ADENTAN MUNICIPAL":{"v":20,"lisa":"LL"},"ASHAIMAN MUNICIPAL":{"v":20,"lisa":"LL"},"AYAWASO CENTRAL MUNICIPAL":{"v":20,"lisa":"LL"},"AYAWASO EAST MUNICIPAL":{"v":20,"lisa":"LL"},"AYAWASO NORTH MUNICIPAL":{"v":20,"lisa":"LL"},"AYAWASO WEST MUNICIPAL":{"v":20,"lisa":"LL"},"GA CENTRAL MUNICIPAL":{"v":20,"lisa":"LL"},"GA EAST MUNICIPAL":{"v":20,"lisa":"LL"},"GA NORTH MUNICIPAL":{"v":20,"lisa":"LL"},"GA SOUTH MUNICIPAL":{"v":20,"lisa":"LL"},"GA WEST MUNICIPAL":{"v":20,"lisa":"LL"},"KORLE KLOTTEY MUNICIPAL":{"v":20,"lisa":"LL"},"KPONE KATAMANSO MUNICIPAL":{"v":20,"lisa":"LL"},"KROWOR MUNICIPAL":{"v":20,"lisa":"LL"},"LA DADE-KOTOPON MUNICIPAL":{"v":20,"lisa":"LL"},"LA NKWANTANANG MADINA MUNICIPAL":{"v":20,"lisa":"LL"},"LEDZOKUKU MUNICIPAL":{"v":20,"lisa":"LL"},"NINGO-PRAMPRAM":{"v":20,"lisa":"LL"},"OKAIKOI NORTH MUNICIPAL":{"v":20,"lisa":"LL"},"SHAI-OSUDOKU":{"v":20,"lisa":"LL"},"TEMA METROPOLITAN AREA (TMA)-TEMA CENTRAL & TEMA EAST":{"v":20,"lisa":"LL"},"TEMA WEST MUNICIPAL":{"v":20,"lisa":"LL"},"WEIJA GBAWE MUNICIPAL":{"v":20,"lisa":"LL"}};
 const REGION=[{"name":"GREATER ACCRA","anc":18,"lisa":"LL"},{"name":"ASHANTI","anc":24,"lisa":"LL"},{"name":"CENTRAL","anc":27,"lisa":"LL"},{"name":"EASTERN","anc":29,"lisa":"LL"},{"name":"WESTERN","anc":31,"lisa":"LH"},{"name":"VOLTA","anc":38,"lisa":"LH"},{"name":"OTI","anc":46,"lisa":"NS"},{"name":"BONO EAST","anc":47,"lisa":"NS"},{"name":"AHAFO","anc":43,"lisa":"NS"},{"name":"BONO","anc":44,"lisa":"NS"},{"name":"WESTERN NORTH","anc":52,"lisa":"NS"},{"name":"UPPER EAST","anc":62,"lisa":"HH"},{"name":"UPPER WEST","anc":67,"lisa":"HH"},{"name":"NORTHERN","anc":72,"lisa":"HH"},{"name":"SAVANNAH","anc":75,"lisa":"HH"},{"name":"NORTHERN EAST","anc":82,"lisa":"HH"}];
 const LISA_COLORS={HH:'#c0392b',LL:'#2980b9',HL:'#e67e22',LH:'#82c0e8',NS:'#bdc3c7'};
 const LISA_LABELS={HH:'High-High cluster',LL:'Low-Low cluster',HL:'High-Low outlier',LH:'Low-High outlier',NS:'Not significant'};
@@ -131,6 +131,7 @@ function renderLISA(){
   const c=document.getElementById('lPanel');c.innerHTML='';
   const svg=svgEl('svg',{width:'100%',viewBox:'0 0 560 660',style:'display:block;max-height:320px'},c);
   svgEl('rect',{x:0,y:0,width:560,height:660,fill:'#ecf0f1'},svg);
+  let af=null;const paths=[];
   for(const d of DSVG){
     const reg=d.r;
     const rd=DDATA[d.n];
@@ -140,9 +141,21 @@ function renderLISA(){
     let el;
     if(d.dot){el=svgEl('circle',{cx:d.cx,cy:d.cy,r:5,fill,stroke:'rgba(255,255,255,0.6)','stroke-width':'0.5',opacity:'0.85',cursor:'pointer'},svg);}
     else{el=svgEl('path',{d:d.d,fill,stroke:'rgba(255,255,255,0.5)','stroke-width':'0.2',opacity:'0.85',cursor:'pointer'},svg);}
+    el.dataset.lisa=lisaClass;paths.push(el);
     el.addEventListener('mouseenter',e=>showTip(e,tipH));el.addEventListener('mousemove',moveTip);el.addEventListener('mouseleave',hideTip);
   }
   RLBL.forEach(([x,y,t])=>svgEl('text',{x,y,'text-anchor':'middle','font-size':'8','fill':'rgba(30,30,30,0.75)','font-weight':'600','pointer-events':'none',style:'text-shadow:0 0 3px #ecf0f1'},svg).textContent=t);
+  const ll=document.getElementById('legL');if(!ll)return;ll.innerHTML='';
+  const cats=['HH','HL','LH','LL','NS'],lbs=['High-High','High-Low','Low-High','Low-Low','Not significant'];
+  const sws=[];const lw=document.createElement('div');lw.className='leg';
+  cats.forEach((lbl,i)=>{
+    const sw=document.createElement('span');sw.style.cssText='cursor:pointer;padding:1px 4px;border-radius:3px;border:1px solid rgba(0,0,0,.08)';
+    sw.innerHTML='<i style="background:'+LISA_COLORS[lbl]+'"></i>'+lbl+' '+lbs[i];
+    sws.push(sw);
+    sw.addEventListener('click',()=>{af=(af===lbl)?null:lbl;paths.forEach(p=>p.setAttribute('opacity',!af||p.dataset.lisa===af?'0.85':'0.12'));sws.forEach((s,si)=>s.style.opacity=!af||cats[si]===af?'1':'0.35');});
+    lw.appendChild(sw);
+  });
+  ll.appendChild(lw);
 }
 
 function hBar(el,labels,vals,colors,tips,xLabel){
@@ -188,41 +201,36 @@ function vBar(el,labels,vals,colors,yLabel){
 }
 
 function renderPanelC(){const el=document.getElementById('pC');if(!el)return;el.innerHTML='';
-const mL=62,mR=16,mT=24,mB=36,bH=14,gap=4,grpGap=10;
-const n=WASH_D.length,cols3=['#117a65','#1a7db5','#e74c3c'];
-const h=mT+(3*bH+2*gap+grpGap)*n+mB;
-const wEl=el.getBoundingClientRect().width||500;const w=Math.max(wEl,300);const pW=w-mL-mR;
+const mL=62,mR=16,mT=12,mB=12,bH=14,gap=4,grpGap=10;
+const cols3=['#117a65','#1a7db5','#e74c3c'],lgs=['Improved water','Improved sanitation','Open defecation'];
+const n=WASH_D.length,h=mT+(3*bH+2*gap+grpGap)*n+mB;
+const wEl=el.getBoundingClientRect().width||500,w=Math.max(wEl,300),pW=w-mL-mR;
 const svg=svgEl('svg',{width:'100%',viewBox:'0 0 '+w+' '+h,style:'display:block'},el);
-const legend=['Improved water','Improved sanitation','Open defecation'];
-legend.forEach((lbl,i)=>{svgEl('rect',{x:mL+i*140,y:6,width:11,height:11,fill:cols3[i],rx:2},svg);svgEl('text',{x:mL+i*140+14,y:15,'font-size':'9','fill':'#444'},svg).textContent=lbl;});
 WASH_D.forEach((d,i)=>{
   const y0=mT+i*(3*bH+2*gap+grpGap);
   [d.water,d.san,d.od].forEach((v,j)=>{
-    const bW=v/100*pW;const y=y0+j*(bH+gap);
+    const bW=v/100*pW,y=y0+j*(bH+gap);
     const bar=svgEl('rect',{x:mL,y,width:bW,height:bH,fill:cols3[j],rx:2,opacity:'0.82',cursor:'pointer'},svg);
-    bar.addEventListener('mouseenter',e=>showTip(e,'<strong>'+d.n+'</strong><br>'+legend[j]+': '+v+'%'));
+    bar.addEventListener('mouseenter',e=>showTip(e,'<strong>'+d.n+'</strong><br>'+lgs[j]+': '+v+'%'));
     bar.addEventListener('mousemove',moveTip);bar.addEventListener('mouseleave',hideTip);
     if(j===0)svgEl('text',{x:mL-3,y:y0+(3*bH+2*gap)/2+4,'text-anchor':'end','font-size':'9','fill':'#333'},svg).textContent=d.n;
     svgEl('text',{x:mL+bW+3,y:y+bH-3,'font-size':'8','fill':'#666'},svg).textContent=v+'%';
   });
-});}
+});
+const lg=document.createElement('div');lg.className='leg';lg.style.marginTop='5px';
+cols3.forEach((c,i)=>{const s=document.createElement('span');s.innerHTML='<i style="background:'+c+'"></i>'+lgs[i];lg.appendChild(s);});
+el.appendChild(lg);}
 function renderPanelD(){const el=document.getElementById('pD');if(!el)return;el.innerHTML='';
-const wEl=el.getBoundingClientRect().width||500;const w=Math.max(wEl,300);const h=180;
-const svg=svgEl('svg',{width:'100%',viewBox:'0 0 '+w+' '+h,style:'display:block'},el);
-const boxes=[{x:20,y:60,w:130,h:44,lbl:'Poverty &\nEnvironment',sub:'SHAP top 3'},{x:(w-130)/2,y:60,w:130,h:44,lbl:'WASH Access',sub:'β=−0.51***'},{x:(w-130)/2,y:0,w:130,h:44,lbl:'Diarrhoea Burden',sub:'Mediator (36%)'},{x:w-150,y:60,w:130,h:44,lbl:'U5MR',sub:'Outcome'}];
-boxes.forEach(b=>{
-  svgEl('rect',{x:b.x,y:b.y,width:b.w,height:b.h,fill:'rgba('+[17,122,101].join(',')+',0.12)',stroke:'#117a65','stroke-width':'1.5',rx:6},svg);
-  svgEl('text',{x:b.x+b.w/2,y:b.y+b.h/2-4,'text-anchor':'middle','font-size':'10','font-weight':'600','fill':'#117a65'},svg).textContent=b.lbl.split('\n')[0];
-  if(b.lbl.includes('\n'))svgEl('text',{x:b.x+b.w/2,y:b.y+b.h/2+8,'text-anchor':'middle','font-size':'9','fill':'#117a65'},svg).textContent=b.lbl.split('\n')[1];
-  svgEl('text',{x:b.x+b.w/2,y:b.y+b.h-5,'text-anchor':'middle','font-size':'8','fill':'#888'},svg).textContent=b.sub;
+el.style.cssText='display:flex;align-items:stretch;gap:6px;padding:8px 4px;flex-wrap:wrap';
+[['Poverty','SHAP top 3'],['WASH Access','β=−0.51***'],['Diarrhoea','Mediator 36%'],['U5MR','Outcome']].forEach((n,i,a)=>{
+  const b=document.createElement('div');b.style.cssText='flex:1;min-width:70px;background:rgba(17,122,101,.11);border:1.5px solid #117a65;border-radius:7px;padding:8px 5px;text-align:center;line-height:1.4';
+  b.innerHTML='<div style="font-weight:700;color:#117a65;font-size:.88em">'+n[0]+'</div><div style="font-size:.72em;color:#888;margin-top:3px">'+n[1]+'</div>';
+  el.appendChild(b);
+  if(i<a.length-1){const a2=document.createElement('div');a2.style.cssText='display:flex;align-items:center;color:#117a65;font-size:1.4em;flex-shrink:0';a2.textContent='→';el.appendChild(a2);}
 });
-const arr=[[150,82,w/2-1,82],[w/2+130,82,w-150,82],[w/2+65,60,w/2+65,44],[w/2,82,w/2,44]];
-arr.forEach(([x1,y1,x2,y2])=>{
-  svgEl('line',{x1,y1,x2,y2,stroke:'#117a65','stroke-width':'2','marker-end':'url(#ah)'},svg);
-});
-const defs=svgEl('defs',{},svg);const mk=svgEl('marker',{id:'ah',markerWidth:'8',markerHeight:'8',refX:'6',refY:'3',orient:'auto'},defs);
-svgEl('path',{d:'M0,0 L0,6 L8,3 z',fill:'#117a65'},mk);
-svgEl('text',{x:w/2,y:h-4,'text-anchor':'middle','font-size':'9','fill':'#888'},svg).textContent='Bootstrap B=1,000 · 36% indirect WASH-mediated effect';}
+const p=document.createElement('p');p.style.cssText='width:100%;font-size:.72em;color:#888;margin-top:6px;text-align:center';
+p.textContent='Bootstrap B=1,000 · 36% indirect WASH-mediated pathway effect';
+el.appendChild(p);}
 function renderPanelE(){const el=document.getElementById('pE');if(!el)return;el.innerHTML='';
 hBar(el,SHAP_LBL,SHAP_VAL,SHAP_COL,SHAP_LBL.map((l,i)=>l+': Mean |SHAP|='+SHAP_VAL[i].toFixed(2)),'Mean |SHAP| value');
 const lg=document.createElement('div');lg.className='leg';lg.style.marginTop='5px';
